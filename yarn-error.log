@@ -1,0 +1,72 @@
+Arguments: 
+  C:\nodejs\node.exe C:\Users\integ\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\integ\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\integ\bin;C:\Python310\Scripts;C:\Python310;C:\Program Files\Java\jdk1.8.0_301\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\app\client\integ\product\12.1.0\client_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\integ\AppData\Local\Microsoft\WindowsApps;C:\Users\integ\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\integ\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received [Object: null prototype]
+      at new NodeError (node:internal/errors:371:5)
+      at validateString (node:internal/validators:120:11)
+      at Object.isAbsolute (node:path:403:5)
+      at module.exports.exports.default (C:\Users\integ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:101158:16)
+      at C:\Users\integ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:51703:63
+      at Generator.next (<anonymous>)
+      at step (C:\Users\integ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\integ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "api-nodejs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "build": "rm -rf build/ && prettier --write source/ && tsc"
+    },
+    "dependencies": {
+      "body-parser": "^1.19.1",
+      "express": "^4.17.1",
+      "knex": "^1.0.2",
+      "oracledb": "^5.3.0",
+      "uuid": "^8.3.2",
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "axios": "^0.19.2"
+      }
+    },
+    "devDependencies": {
+      "@types/express": "^4.17.12",
+      "@types/oracledb": "^5.2.3",
+      "@types/uuid": "^8.3.0",
+      "@typescript-eslint/eslint-plugin": "^4.25.0",
+      "@typescript-eslint/parser": "^4.25.0",
+      "eslint": "^7.27.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-import-resolver-typescript": "^2.4.0",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-import-helpers": "^1.1.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "prettier": "^2.5.1",
+      "ts-node-dev": "^1.1.6",
+      "typescript": "^4.3.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
